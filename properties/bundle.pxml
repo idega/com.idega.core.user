@@ -10,14 +10,9 @@
             <value>
               <map>
                 <key>
-                  <name>component_name</name>
+                  <name>component_property_file</name>
                   <type>java.lang.String</type>
-                  <value>Component Permissions</value>
-                </key>
-                <key>
-                  <name>component_type</name>
-                  <type>java.lang.String</type>
-                  <value>iw.application</value>
+                  <value>com.idega.core.accesscontrol.app.AccessControllerApp.pxml</value>
                 </key>
               </map>
             </value>
