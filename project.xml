@@ -48,9 +48,7 @@
       <version>spec1_0_1</version>
       <type>jar</type>
       <url>http://java.sun.com/products/jta/jta-1_0_1B-doc</url>
-      <properties>
-        <idegaweb.bundle.include>true</idegaweb.bundle.include>
-      </properties>
+      <properties />
     </dependency>
     <dependency>
       <groupId>ejb</groupId>
@@ -58,9 +56,7 @@
       <version>2.0</version>
       <type>jar</type>
       <url>http://java.sun.com/products/ejb/docs.html</url>
-      <properties>
-        <idegaweb.bundle.include>true</idegaweb.bundle.include>
-      </properties>
+      <properties />
     </dependency>
     <dependency>
       <groupId>myfaces</groupId>
@@ -68,9 +64,7 @@
       <version>1.0</version>
       <type>jar</type>
       <url>http://java.sun.com/j2ee/javaserverfaces/</url>
-      <properties>
-      	<idegaweb.bundle.include>true</idegaweb.bundle.include>
-      </properties>
+      <properties />
     </dependency>
     <dependency>
       <groupId>bundles</groupId>
