@@ -5,11 +5,17 @@
   <pomVersion>3</pomVersion>
   <name>idegaWeb Core user</name>
   <artifactId>com.idega.core.user</artifactId>
-  <currentVersion>1.0.1</currentVersion>
-  <!--currentVersion>1.0.1-SNAPSHOT</currentVersion-->
+  <!--currentVersion>1.0.1</currentVersion-->
+  <currentVersion>1.0.1-SNAPSHOT</currentVersion>
+
   <inceptionYear>2000</inceptionYear>
   <shortDescription>Core User</shortDescription>
   <versions>
+    <version>
+      <id>1.0.1</id>
+      <name>1.0.1</name>
+      <tag>CORE_USER_1_0_1</tag>
+    </version>
   </versions>
   <branches/>
   <developers>
@@ -49,7 +55,7 @@
       <version>spec1_0_1</version>
       <type>jar</type>
       <url>http://java.sun.com/products/jta/jta-1_0_1B-doc</url>
-      <properties />
+      <properties/>
     </dependency>
     <dependency>
       <groupId>ejb</groupId>
@@ -57,7 +63,7 @@
       <version>2.0</version>
       <type>jar</type>
       <url>http://java.sun.com/products/ejb/docs.html</url>
-      <properties />
+      <properties/>
     </dependency>
     <dependency>
       <groupId>myfaces</groupId>
@@ -65,13 +71,14 @@
       <version>1.0.9</version>
       <type>jar</type>
       <url>http://java.sun.com/j2ee/javaserverfaces/</url>
-      <properties />
+      <properties/>
     </dependency>
     <dependency>
       <groupId>bundles</groupId>
       <artifactId>com.idega.core</artifactId>
-      <!--HELPER--><version>3.0.5</version><!--HELPER-->
-      <!--HELPERversion>SNAPSHOT</versionHELPER-->
+      <!--version>3.0.5</version-->
+      <version>SNAPSHOT</version>
+
       <type>jar</type>
       <url>http://www.idega.com/</url>
       <properties>
