@@ -30,7 +30,7 @@ import com.idega.util.IWTimestamp;
  * Description:
  * Copyright:    Copyright (c) 2001
  * Company:      idega.is
- * @author 2000 - idega team - <a href="mailto:gummi@idega.is">Guðmundur Ágúst Sæmundsson</a>
+ * @author 2000 - idega team - <a href="mailto:gummi@idega.is">Guï¿½mundur ï¿½gï¿½st Sï¿½mundsson</a>
  * @version 1.0
  */
 
@@ -100,7 +100,7 @@ public class CreateUser extends Window {
 
 	public CreateUser() {
 		super();
-		this.setName("idegaWeb Builder - Stofna félaga");
+		this.setName("idegaWeb Builder - Stofna fï¿½laga");
 		this.setHeight(460);
 		this.setWidth(390);
 		this.setBackgroundColor("#d4d0c8");
@@ -158,7 +158,7 @@ public class CreateUser extends Window {
 		this.goToPropertiesField.setChecked(true);
 
 		this.primaryGroupField = new DropdownMenu(CreateUser.primaryGroupFieldParameterName);
-		//primaryGroupField.addMenuElement("","aðalhópur");
+		//primaryGroupField.addMenuElement("","aï¿½alhï¿½pur");
 		this.primaryGroupField.addSeparator();
 
 		try {

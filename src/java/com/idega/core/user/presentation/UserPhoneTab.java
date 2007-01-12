@@ -17,7 +17,7 @@ import com.idega.presentation.ui.TextInput;
  * Title:        User
  * Copyright:    Copyright (c) 2001
  * Company:      idega.is
- * @author 2000 - idega team - <a href="mailto:gummi@idega.is">Guðmundur Ágúst Sæmundsson</a>
+ * @author 2000 - idega team - <a href="mailto:gummi@idega.is">Guï¿½mundur ï¿½gï¿½st Sï¿½mundsson</a>
  * @version 1.0
  */
 
@@ -83,17 +83,17 @@ public class UserPhoneTab extends UserTab{
     this.faxPhoneField.setContent((String)this.fieldValues.get(UserPhoneTab.faxPhoneFieldName));
 
     if ( (String)this.fieldValues.get(UserPhoneTab.homePhoneMenuName) != null  && ((String)this.fieldValues.get(UserPhoneTab.homePhoneMenuName)).length() > 0) {
-			this.homePhoneMenu.setSelectedElement((String)this.fieldValues.get(UserPhoneTab.homePhoneMenuName));
-		}
+		this.homePhoneMenu.setSelectedElement((String)this.fieldValues.get(UserPhoneTab.homePhoneMenuName));
+	}
     if ( (String)this.fieldValues.get(UserPhoneTab.workPhoneMenuName) != null  && ((String)this.fieldValues.get(UserPhoneTab.workPhoneMenuName)).length() > 0) {
-			this.workPhoneMenu.setSelectedElement((String)this.fieldValues.get(UserPhoneTab.workPhoneMenuName));
-		}
+		this.workPhoneMenu.setSelectedElement((String)this.fieldValues.get(UserPhoneTab.workPhoneMenuName));
+	}
     if ( (String)this.fieldValues.get(UserPhoneTab.mobilePhoneMenuName) != null  && ((String)this.fieldValues.get(UserPhoneTab.mobilePhoneMenuName)).length() > 0) {
-			this.mobilePhoneMenu.setSelectedElement((String)this.fieldValues.get(UserPhoneTab.mobilePhoneMenuName));
-		}
+		this.mobilePhoneMenu.setSelectedElement((String)this.fieldValues.get(UserPhoneTab.mobilePhoneMenuName));
+	}
     if ( (String)this.fieldValues.get(UserPhoneTab.faxPhoneMenuName) != null && ((String)this.fieldValues.get(UserPhoneTab.faxPhoneMenuName)).length() > 0 ) {
-			this.faxPhoneMenu.setSelectedElement((String)this.fieldValues.get(UserPhoneTab.faxPhoneMenuName));
-		}
+		this.faxPhoneMenu.setSelectedElement((String)this.fieldValues.get(UserPhoneTab.faxPhoneMenuName));
+	}
 
     this.emailField.setContent((String)this.fieldValues.get(UserPhoneTab.emailFieldName));
   }
@@ -260,8 +260,8 @@ public class UserPhoneTab extends UserTab{
           }
         }
         if ( (String)this.fieldValues.get(UserPhoneTab.emailFieldName) != null && ((String)this.fieldValues.get(UserPhoneTab.emailFieldName)).length() > 0 ) {
-					this.business.updateUserMail(getUserId(),(String)this.fieldValues.get(UserPhoneTab.emailFieldName));
-				}
+			this.business.updateUserMail(getUserId(),(String)this.fieldValues.get(UserPhoneTab.emailFieldName));
+		}
       }
     }
     catch(Exception e){
@@ -284,21 +284,21 @@ public class UserPhoneTab extends UserTab{
           this.fieldValues.put(UserPhoneTab.homePhoneFieldName,(phones[a].getNumber() != null) ? phones[a].getNumber():"" );
         }
         else if ( a == 1 ) {
-          this.fieldValues.put(UserPhoneTab.workPhoneMenuName,(phones[a].getPhoneTypeId() != -1) ? Integer.toString(phones[a].getPhoneTypeId()):"" );
-          this.fieldValues.put(UserPhoneTab.workPhoneFieldName,(phones[a].getNumber() != null) ? phones[a].getNumber():"" );
+          this.fieldValues.put(this.workPhoneMenuName,(phones[a].getPhoneTypeId() != -1) ? Integer.toString(phones[a].getPhoneTypeId()):"" );
+          this.fieldValues.put(this.workPhoneFieldName,(phones[a].getNumber() != null) ? phones[a].getNumber():"" );
         }
         else if ( a == 2 ) {
-          this.fieldValues.put(UserPhoneTab.mobilePhoneMenuName,(phones[a].getPhoneTypeId() != -1) ? Integer.toString(phones[a].getPhoneTypeId()):"" );
-          this.fieldValues.put(UserPhoneTab.mobilePhoneFieldName,(phones[a].getNumber() != null) ? phones[a].getNumber():"" );
+          this.fieldValues.put(this.mobilePhoneMenuName,(phones[a].getPhoneTypeId() != -1) ? Integer.toString(phones[a].getPhoneTypeId()):"" );
+          this.fieldValues.put(this.mobilePhoneFieldName,(phones[a].getNumber() != null) ? phones[a].getNumber():"" );
         }
         else if ( a == 3 ) {
-          this.fieldValues.put(UserPhoneTab.faxPhoneMenuName,(phones[a].getPhoneTypeId() != -1) ? Integer.toString(phones[a].getPhoneTypeId()):"" );
-          this.fieldValues.put(UserPhoneTab.faxPhoneFieldName,(phones[a].getNumber() != null) ? phones[a].getNumber():"" );
+          this.fieldValues.put(this.faxPhoneMenuName,(phones[a].getPhoneTypeId() != -1) ? Integer.toString(phones[a].getPhoneTypeId()):"" );
+          this.fieldValues.put(this.faxPhoneFieldName,(phones[a].getNumber() != null) ? phones[a].getNumber():"" );
         }
       }
       if ( mail != null ) {
-				this.fieldValues.put(UserPhoneTab.emailFieldName,(mail.getEmailAddress() != null) ? mail.getEmailAddress():"" );
-			}
+		this.fieldValues.put(this.emailFieldName,(mail.getEmailAddress() != null) ? mail.getEmailAddress():"" );
+	}
 
       this.updateFieldsDisplayStatus();
 

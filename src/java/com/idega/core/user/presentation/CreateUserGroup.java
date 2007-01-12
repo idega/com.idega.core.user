@@ -4,6 +4,7 @@ import java.util.Vector;
 
 import com.idega.core.accesscontrol.data.PermissionGroup;
 import com.idega.core.data.GenericGroup;
+import com.idega.core.user.business.UserBusiness;
 import com.idega.data.GenericEntity;
 import com.idega.presentation.IWContext;
 import com.idega.presentation.Table;
@@ -22,7 +23,7 @@ import com.idega.presentation.ui.Window;
  * Description:
  * Copyright:    Copyright (c) 2001
  * Company:      idega.is
- * @author 2000 - idega team - <a href="mailto:gummi@idega.is">Guðmundur Ágúst Sæmundsson</a>
+ * @author 2000 - idega team - <a href="mailto:gummi@idega.is">Guï¿½mundur ï¿½gï¿½st Sï¿½mundsson</a>
  * @version 1.0
  */
 
@@ -30,6 +31,7 @@ public class CreateUserGroup extends Window {
 
   private Text groupNameText;
   private Text descriptionText;
+  private Text groupTypeText;
 
   private TextInput groupNameField;
   private TextArea descriptionField;
@@ -50,17 +52,20 @@ public class CreateUserGroup extends Window {
   public static String descriptionFieldParameterName = "description";
   public static String groupTypeFieldParameterName = "group_type";
 
+  private UserBusiness business;
+
   private String rowHeight = "37";
 
   public CreateUserGroup() {
     super();
     this.groupType = new  Vector();
-    this.setName("idegaWeb Builder - Stofna Hóp");
+    this.setName("idegaWeb Builder - Stofna Hï¿½p");
     this.setHeight(340);
     this.setWidth(390);
     this.setBackgroundColor("#d4d0c8");
     this.myForm = new Form();
     this.add(this.myForm);
+    this.business = new UserBusiness();
     initializeTexts();
     initializeFields();
     init();
@@ -71,6 +76,7 @@ public class CreateUserGroup extends Window {
 
     this.groupNameText = new Text("Group name:");
     this.descriptionText = new Text("Description : ");
+    this.groupTypeText = new Text("Type: ");
   }
 
   protected void initializeFields(){

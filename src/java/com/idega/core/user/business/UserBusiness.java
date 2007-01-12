@@ -192,7 +192,7 @@ public class UserBusiness {
         //throw new RuntimeException("String gender must be: M, male, 0, F, female or 1 ");
         return null;
       }
-      Gender g = (Gender) GenericEntity.getStaticInstance(Gender.class);
+      Gender g = (Gender)GenericEntity.getStaticInstance(Gender.class);
       String[] result = com.idega.data.SimpleQuerier.executeStringQuery("Select "+g.getIDColumnName()+" from "+g.getEntityName()+"where "+com.idega.core.user.data.GenderBMPBean.getNameColumnName()+" = '"+genderName+"'");
 
       if(result != null && result.length > 0){
@@ -246,8 +246,8 @@ public class UserBusiness {
       List L = EntityFinder.getInstance().findRelated(user,Email.class);
       if(L != null){
         if ( L.size() > 0 ) {
-					return (Email)L.get(0);
-				}
+			return (Email)L.get(0);
+		}
       }
       return null;
     }
@@ -459,8 +459,8 @@ public class UserBusiness {
       java.util.List c = EntityFinder.getInstance().findAllByColumn(Email.class,com.idega.core.contact.data.EmailBMPBean.getColumnNameAddress(),EmailAddress);
       //EntityFinder.debug = false;
       if(c!=null && c.size() > 0) {
-				return (Email) c.get(0);
-			}
+		return (Email) c.get(0);
+	}
     }
     catch (Exception ex) {
 
@@ -508,7 +508,7 @@ public class UserBusiness {
 
 
   public static List getUsers() throws SQLException  {
-    List l = EntityFinder.findAll(GenericEntity.getStaticInstance(User.class));
+    List l = EntityFinder.findAll(UserBMPBean.getStaticInstance());
     return l;
   }
 
@@ -559,7 +559,7 @@ public class UserBusiness {
 
   public static List getUsersInPrimaryGroup(GenericGroup group){
     try {
-      return EntityFinder.findAllByColumn(GenericEntity.getStaticInstance(User.class),UserBMPBean._COLUMNNAME_PRIMARY_GROUP_ID,group.getID());
+      return EntityFinder.findAllByColumn(UserBMPBean.getStaticInstance(),UserBMPBean._COLUMNNAME_PRIMARY_GROUP_ID,group.getID());
     }
     catch (SQLException ex) {
       ex.printStackTrace();

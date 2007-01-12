@@ -22,7 +22,7 @@ import com.idega.user.data.UserBMPBean;
  * Description: The main business class for Group management in the idegaWeb User system.
  * Copyright:    Idega Software Copyright (c) 2001
  * Company:      Idega Software
- * @author idega team <a href="mailto:gummi@idega.is">Guðmundur Ágúst Sæmundsson</a>
+ * @author idega team <a href="mailto:gummi@idega.is">Guï¿½mundur ï¿½gï¿½st Sï¿½mundsson</a>
  * @version 1.0
  */
 
@@ -528,7 +528,7 @@ public class UserGroupBusiness {
         sGroupList += item.getID();
       }
       if(!sGroupList.equals("")){
-        User user = (User) GenericEntity.getStaticInstance(User.class);
+        User user = UserBMPBean.getStaticInstance();
         return EntityFinder.findAll(user,"Select * from "+user.getEntityName()+" where "+UserBMPBean._COLUMNNAME_USER_GROUP_ID+" in ("+sGroupList+")");
       }
     }

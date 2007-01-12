@@ -17,7 +17,7 @@ import com.idega.util.IWTimestamp;
  * Description:
  * Copyright:    Copyright (c) 2001
  * Company:      idega.is
- * @author 2000 - idega team - <a href="mailto:gummi@idega.is">Guðmundur Ágúst Sæmundsson</a>
+ * @author 2000 - idega team - <a href="mailto:gummi@idega.is">Guï¿½mundur ï¿½gï¿½st Sï¿½mundsson</a>
  * @version 1.0
  */
 
@@ -34,6 +34,7 @@ public class UserLoginTab extends UserTab {
   private PasswordInput passwordField;
   private PasswordInput confirmPasswordField;
 
+  private Text generatePasswordText;
   private Text mustChangePasswordText;
   private Text cannotChangePasswordText;
   private Text passwordNeverExpiresText;
@@ -77,7 +78,7 @@ public class UserLoginTab extends UserTab {
   public void initFieldContents() {
     try {
       LoginTable lTable = LoginDBHandler.getUserLogin(this.getUserId());
-      LoginInfo lInfo = LoginDBHandler.getLoginInfo(lTable);
+      LoginInfo lInfo = LoginDBHandler.getLoginInfo(lTable.getID());
 
       if(lTable != null){
         this.fieldValues.put(_PARAM_USER_LOGIN,lTable.getUserLogin());
@@ -197,7 +198,7 @@ public class UserLoginTab extends UserTab {
             LoginDBHandler.updateLogin(this.getUserId(),login,passw);
           }
           if(this._displayLoginInfoSettings){
-            LoginDBHandler.updateLoginInfo(loginTable,accountEnabled,IWTimestamp.RightNow(),5000,passwExpires,canChangePassw,mustChangePassw,null);
+            LoginDBHandler.updateLoginInfo(loginTable.getID(),accountEnabled,IWTimestamp.RightNow(),5000,passwExpires,canChangePassw,mustChangePassw,null);
           }
         } else if(updateLoginTable){
           if(this._displayLoginInfoSettings){
